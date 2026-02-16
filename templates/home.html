@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Bienvenue sur LitRevu !</h2>
+  <p>Page d’accueil du site.</p>
+  {% if user.is_authenticated %}
+    <form method="post" action="{% url 'logout' %}" style="display:inline;">
+      {% csrf_token %}
+      <button type="submit" class="button">Déconnexion</button>
+    </form>
+  {% else %}
+    <a href="{% url 'login' %}" class="button">Connexion</a>
+    <a href="{% url 'signup' %}" class="button">Inscription</a>
+  {% endif %}
+{% endblock %}
