@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-  <h2>Bienvenue sur LitRevu !</h2>
+{% load static %}
+  <div class="bandeau">
+    <h2>Bienvenue sur LitRevu !</h2>
+  </div>
   <p>Page d’accueil du site.</p>
   {% if user.is_authenticated %}
     <form method="post" action="{% url 'logout' %}" style="display:inline;">

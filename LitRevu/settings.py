@@ -116,7 +116,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+# Ajout pour prendre en compte les dossiers staticfiles et static
+STATICFILES_DIRS = [
+    BASE_DIR / 'staticfiles',
+    BASE_DIR / 'static',
+]
 
 # Utilisation du modèle utilisateur personnalisé
 AUTH_USER_MODEL = 'authentification.CustomUser'

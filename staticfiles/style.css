@@ -1,0 +1,62 @@
+/* Style simple pour boutons et liens principaux */
+h2{
+    padding-bottom: 32%;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+body{
+    background: linear-gradient(120deg,#e2922913,#f7c88b25,#eeb56a18);
+}
+
+.bandeau {
+    background-image: url('/static/images/banniere.png');
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 95%;
+    margin: auto;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        position: relative;
+        overflow: hidden;
+}
+
+    .bandeau::before,
+    .bandeau::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 80px;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+    .bandeau::before {
+        left: 0;
+        width: 160px;
+        background: linear-gradient(to right, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0.2) 80%, rgba(233,212,184,0.12) 100%);
+        filter: blur(14px);
+    }
+    .bandeau::after {
+        right: 0;
+        width: 160px;
+        background: linear-gradient(to left, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0.2) 80%, rgba(233,212,184,0.12) 100%);
+        filter: blur(14px);
+    }
+
+.button{
+    border: 2px solid #e4d19d;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    background: linear-gradient(#e9d4b8,#f7c88b);
+
+}
