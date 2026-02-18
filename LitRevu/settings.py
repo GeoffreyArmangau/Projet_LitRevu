@@ -128,4 +128,7 @@ STATICFILES_DIRS = [
 AUTH_USER_MODEL = 'authentification.CustomUser'
 
 # Redirection après connexion
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/reviews/flux/'
+
+# URL de connexion
+LOGIN_URL = '/auth/login/'

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <h2>Mon flux</h2>
+  <div id="flux-list"></div>
+{% block extra_js %}
+<script src="{% static 'flux.js' %}"></script>
+{% endblock %}
+{% endblock %}
