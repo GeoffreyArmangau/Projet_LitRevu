@@ -5,9 +5,11 @@
     <title>{% block title %}LitRevu{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% block extra_css %}{% endblock %}
 </head>
 <body>
     <main>
+        <h1>LitReview</h1>
         {% block content %}{% endblock %}
     </main>
 </body>

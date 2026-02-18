@@ -1,0 +1,77 @@
+/* Conteneur principal en deux colonnes */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    margin: 60px auto;
+    max-width: 700px;
+}
+
+.home-column {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    border: 1.5px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 40px 30px 30px 30px;
+    min-width: 250px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.home-column.left {
+    align-items: flex-start;
+}
+
+.home-column.right {
+    align-items: flex-start;
+}
+
+.home-column h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.3em;
+    color: #2a2a2a;
+}
+
+/* Conteneur pour les blocs "Inscrivez-vous" et "Connectez-vous" */
+.home-flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 400px;
+    margin: 40px auto 0 auto;
+    max-width: 700px;
+}
+
+.home-flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    min-width: 220px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* aligne tout à droite */
+    gap: 15px;
+    width: 100%;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 220px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1.2px solid #2a2a2a;
+    font-size: 1em;
+    background: #f9f9f9;
+    text-align: center; /* Centrer le texte dans les champs */
+}
+.login-form button {
+    width: 140px;
+    align-self: flex-end; /* Place le bouton à droite */
+}
