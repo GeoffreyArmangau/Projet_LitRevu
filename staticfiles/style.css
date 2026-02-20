@@ -17,12 +17,12 @@ a{
     color: black;
 }
 
-.button, .button-radius{
+.button, .button-radius, .file-button{
     background: #d4b892c4;
     padding: 8px 16px;
     border: 1px solid black;
 }
 
-.button-radius{
+.button-radius, .file-button{
     border-radius: 10px;
 }

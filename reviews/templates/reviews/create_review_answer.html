@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'create_review_answer.css' %}">
+{% endblock %}
+{% block content %}
+<div class="form-container">
+    <h2>Créer une critique</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Ticket concerné</legend>
+            {{ ticket_display|safe }}
+        </fieldset>
+        <div class="separator"></div>
+        <fieldset>
+            <legend>Critique</legend>
+            {{ review_form.headline.label_tag }}
+            {{ review_form.headline }}
+            <label>Note</label>
+            <div class="rating-group">
+                {% for i in "012345" %}
+                    <input type="radio" name="rating" id="rating_{{ i }}" value="{{ i }}" {% if review_form.rating.value|stringformat:'s' == i %}checked{% endif %}>
+                    <label for="rating_{{ i }}">{{ i }}</label>
+                {% endfor %}
+            </div>
+            {{ review_form.body.label_tag }}
+            {{ review_form.body }}
+        </fieldset>
+        <button type="submit" class="button-radius">Envoyer</button>
+    </form>
+</div>
+{% block extra_js %}
+<script src="{% static 'create_review_answer.js' %}"></script>
+{% endblock %}
+{% endblock %}
